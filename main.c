@@ -124,7 +124,7 @@ int main(int argc, char* argv[]) {
             k = 1;
             f = sqrt(x + a + b*b) / cos(x);
         } else if (x < (c + b) && a == 0) {
-            if (abs(a*x) == abs(c*c)) {
+            if (abs(a*x) == abs(c*c) || a == 0 || b == 0) {
                 k = 4;
                 printf("x = %.2f\tf%d is not defined\n", x, k);
                 continue;
